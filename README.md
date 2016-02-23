@@ -1,4 +1,4 @@
-# MoeCDN-EMLOG
+# MoeCDN-Universal-PHP
 MoeNet Public libraries CDN PHP universal version   
 本项目由 Kenvix 维护 - http://zhizhe8.net       
 注意：如果MoeCDN有提供对于您的程序的定制版本，强烈建议您优先使用定制的MoeCDN
@@ -19,7 +19,11 @@ ajax.googleapis.com -> cdn.moefont.com/ajax
 ### 使用方法
 在您的PHP程序中加入以下代码即可使用 MoeCDN      
 ```php
-include moecdn.php
+include 'moecdn.php';
+```
+注意：如果你发现周围不是PHP代码而是别的东西，则需要写成
+```php
+<?php include 'moecdn.php'; ?>
 ```
 ### 代码库地址
 Git@OSC: http://git.oschina.net/kenvix/MoeCDN-EMLOG       
