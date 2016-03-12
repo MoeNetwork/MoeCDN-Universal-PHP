@@ -1,9 +1,10 @@
 <?php
 class MoeCDN {
     public static $options = array(
-        'gravatar'    => '1', //use gravatar cdn?
-        'googleapis'  => '1', //use google apis cdn?
-        'worg'        => '1' //use worg cdn?
+        'gravatar'    => true, //use gravatar cdn?
+        'googleapis'  => true, //use google apis cdn?
+        'worg'        => false, //use w.org(wordpress) cdn?
+        'wpcom'       => false //use wp.com(wordpress.com) cdn?
     );
 
     // 缓冲替换输出
@@ -27,7 +28,6 @@ class MoeCDN {
         }
 
         if (self::$options['worg']) {
-            $content = str_replace(array("\\/\\/s.w.org"), "\\/\\/cdn.moefont.com\\/worg", $content);
             $content = str_replace(array("//s.w.org"), "//cdn.moefont.com/worg", $content);
         }
 
